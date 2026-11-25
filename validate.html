@@ -4,22 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>机构页面轻量校验 · GEO 工作台</title>
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/demo.css">
-<link rel="stylesheet" href="css/validate.css">
+<link rel="stylesheet" href="css/base.css?v=7cf961ba0038">
+<link rel="stylesheet" href="css/components.css?v=7cf961ba0038">
+<link rel="stylesheet" href="css/demo.css?v=7cf961ba0038">
+<link rel="stylesheet" href="css/validate.css?v=7cf961ba0038">
 </head>
 <body>
-<header class="demo-nav"><a class="demo-brand" href="index.html"><span>G</span>机构 GEO 诊断工作台</a><span class="demo-badge">纯静态 · 本地校验</span></header>
+<header class="demo-nav"><a class="demo-brand" href="demo.html"><span>G</span>机构 GEO 诊断工作台</a><span class="demo-badge">纯静态 · 本地校验</span></header>
 <main class="demo-main validation-main">
   <section class="validation-intro"><p class="demo-eyebrow">LIGHTWEIGHT CHECK</p><h1>粘贴一份页面源码，查看信息缺口。</h1><p>检查标题、描述、H1、索引指令、图片 alt 和 JSON-LD 等局部规则。输入仅在当前浏览器内存中处理，不上传、不保存。</p><p class="note">这是静态页面检查，不代表 AI 真实推荐、全网负面排查、关键词热度或机构医疗质量评分。</p></section>
   <div class="validation-layout"><section class="card"><div class="card-title"><h2>页面快照</h2><span class="hint">先试示例，再检查自己的源码</span></div><div class="validation-actions"><button type="button" id="load-before" class="demo-button">载入问题示例</button><button type="button" id="load-after" class="demo-button">载入修复示例</button></div>
   <form id="validation-form"><label>页面地址（只解析，不在线抓取）<input id="page-url" type="url" value="https://example.com/clinic" required></label><label>选择本地 HTML（可选）<input id="html-file" type="file" accept=".html,.htm,text/html"></label><label>HTML 源码<textarea id="page-html" rows="13" placeholder="粘贴完整 HTML，或先载入示例…" required></textarea></label><p class="note" id="input-kind">尚未载入快照。上传或粘贴自己的页面时，不使用示例门店事实作判断。</p><button class="demo-button primary" id="run-validation">开始轻量校验</button></form><p id="validation-notice" role="status" aria-live="polite"></p></section>
   <section class="card"><div class="card-title"><h2>校验结果</h2><span class="hint">可回溯的检查证据</span></div><div id="validation-result"><div class="validation-empty"><h3>等待一份页面快照</h3><p>载入问题示例后点击校验，即可查看问题清单；再载入修复示例比较结果。</p></div></div></section></div>
-  <footer class="demo-footer"><p>最大 512 KB。脚本和图片不会被执行或加载；缺失信息与未检查项目分别展示。刷新或关闭后，本页输入和结果会清空。</p><a href="index.html">返回业务演示 ↗</a></footer>
+  <footer class="demo-footer"><p>最大 512 KB。脚本和图片不会被执行或加载；缺失信息与未检查项目分别展示。刷新或关闭后，本页输入和结果会清空。</p><a href="demo.html">返回业务演示 ↗</a></footer>
 </main>
-<script src="js/site-audit-engine.js"></script>
-<script src="js/site-audit-examples.js"></script>
-<script src="js/validate.js"></script>
+<script src="js/site-audit-engine.js?v=7cf961ba0038"></script>
+<script src="js/site-audit-examples.js?v=7cf961ba0038"></script>
+<script src="js/validate.js?v=7cf961ba0038"></script>
 </body>
 </html>

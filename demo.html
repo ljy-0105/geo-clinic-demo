@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>医美机构 GEO 智能诊断工作台 · 初版演示</title>
+  <link rel="stylesheet" href="css/base.css?v=7cf961ba0038">
+  <link rel="stylesheet" href="css/components.css?v=7cf961ba0038">
+  <link rel="stylesheet" href="css/demo.css?v=7cf961ba0038">
+</head>
+<body>
+  <header class="demo-nav"><a class="demo-brand" href="demo.html"><span>G</span>机构 GEO 诊断工作台</a><span class="demo-badge">方案验证版 · 2026.11</span></header>
+  <main class="demo-main">
+    <section class="demo-hero"><div><p class="demo-eyebrow">从一次性诊断，到机构自己的工作台</p><h1>看清 AI 如何描述机构，<br>让诊断有依据、优化有方向。</h1><p class="demo-lead">围绕机构信息、多平台回答与官网证据，整理诊断结果和后续动作。当前以一个门店的历史样本，验证采集、分析与报告呈现流程。</p><div class="demo-actions"><a class="demo-button primary" href="#sample">查看样本诊断 ↓</a><a class="demo-button" href="index.html?tab=report">打开完整样本报告 ↗</a><a class="demo-button" href="validate.html">试用轻量校验 ↗</a></div></div><aside class="demo-hero-note"><span>业务目标</span><strong>机构诊断<br>内部完成</strong><p>评估替代当前每次 50–60 元外部诊断服务的可行性。</p><small>价格来自需求沟通；本版尚未核算单次完整成本。</small></aside></section>
+    <section class="demo-flow" aria-label="诊断流程"><div><span>01</span><strong>确认机构</strong><small>品牌、分院与许可证名称</small></div><div><span>02</span><strong>收集证据</strong><small>AI 回答、官网与事实资料</small></div><div><span>03</span><strong>形成诊断</strong><small>覆盖、差异与待核验问题</small></div><div><span>04</span><strong>推进优化</strong><small>内容、整改与后续复测</small></div></section>
+    <section id="sample" class="demo-sample"><div class="demo-heading"><div><p class="demo-eyebrow">实际样本 · 可追溯</p><h2>先看一份已有证据的诊断</h2></div><span class="demo-status">历史观测快照</span></div><div id="demo-results"><p>正在读取随包样本…</p></div></section>
+    <section class="demo-section"><div class="demo-heading"><div><p class="demo-eyebrow">需求与初版的对应关系</p><h2>完整工作台，按业务优先级推进</h2></div></div><div class="demo-capabilities">
+      <article><span class="demo-state ready">可查看真实样本</span><h3>多平台表现</h3><p>已保留 DeepSeek API、豆包网页、腾讯元宝网页的独立历史样本，展示回答、提及与样本范围。</p><small>“六大平台”的具体名单待确认；当前不宣称六家均已接入。</small></article>
+      <article><span class="demo-state ready">可操作模块</span><h3>官网信息诊断</h3><p>上传或粘贴官网 HTML，检查页面信息、结构化数据和已确认门店事实，并跟踪整改。</p><a href="index.html?tab=siteaudit">体验诊断与整改 →</a></article>
+      <article><span class="demo-state ready">可查看样本报告</span><h3>诊断报告</h3><p>根据已导入数据生成通道结果、事实覆盖和后续建议；保留来源与缺测说明。</p><a href="index.html?tab=report">查看完整报告 →</a></article>
+      <article><span class="demo-state planned">下一阶段定义</span><h3>机构综合评分</h3><p>建议按公开信息完整度、可核验性及实际平台观测分维度评分，展示每项扣分证据和检查覆盖率。</p><small>评分标准、权重与业务方确认后实施；本版不生成缺乏依据的总分。</small></article>
+      <article><span class="demo-state planned">下一阶段接入</span><h3>负面信息排查</h3><p>规划按机构身份检索公开来源，列出时间、链接、关联依据与风险类型，再进行人工复核。</p><small>当前事件台账不是全网负面搜索；未检索不能等同无负面。</small></article>
+      <article><span class="demo-state planned">待确认数据来源</span><h3>关键词热度</h3><p>现有中文问题拓展可用于建立待测词库；真实搜索量、地域和热度趋势需要接入对应数据源。</p><a href="index.html?tab=discovery">体验相关问题拓展 →</a></article>
+    </div></section>
+    <section class="demo-next demo-section"><div><p class="demo-eyebrow">建议的下一步</p><h2>先把一份诊断，与真实业务对齐。</h2><p>用同一家机构的现有外部诊断报告逐项对照，确认必须覆盖什么、哪些结果需要人工复核，再评估替代范围和成本。</p></div><ol><li><strong>确认输出</strong><span>一份脱敏报告样例、六个平台名单、必需字段与使用场景。</span></li><li><strong>联合试点</strong><span>业务方授权一家机构和必要账号，补齐数据源，完成同机构对照。</span></li><li><strong>评估扩展</strong><span>比较覆盖率、误判/漏检、耗时、人工复核与单次总成本，再决定批量化。</span></li></ol></section>
+    <footer class="demo-footer"><p>本版用于业务与技术可行性沟通。历史样本不代表今日监测；三站自动采集仍需本人登录和试采验证。</p><a href="index.html?tab=workbench">进入完整工作台 ↗</a></footer>
+  </main>
+  <script src="data.js?v=7cf961ba0038"></script>
+  <script src="js/demo.js?v=7cf961ba0038"></script>
+</body>
+</html>
