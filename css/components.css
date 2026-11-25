@@ -1,0 +1,107 @@
+/* ---------- 提示条 ---------- */
+.banner{display:flex;gap:12px;align-items:flex-start;padding:12px 16px;border-radius:10px;
+  background:var(--warn-soft);border:1px solid #f2dfbd;color:#6b4406;font-size:13px;margin-bottom:16px}
+.banner.danger{background:var(--danger-soft);border-color:#f2cfcb;color:#7c2620}
+.banner b{font-weight:600}
+.banner .dot{width:7px;height:7px;border-radius:50%;background:currentColor;
+  margin-top:6px;flex:none;opacity:.6}
+
+/* ---------- KPI ---------- */
+.kpi{position:relative;overflow:hidden}
+.kpi .k-label{font-size:12.5px;color:var(--muted);letter-spacing:.02em;margin-bottom:6px}
+.kpi .k-value{font-size:30px;font-weight:600;letter-spacing:-.03em;line-height:1.15;
+  font-variant-numeric:tabular-nums}
+.kpi .k-value small{font-size:15px;font-weight:500;color:var(--muted);margin-left:2px}
+.kpi .k-foot{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.55}
+.kpi .k-accent{position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent)}
+.kpi.warn .k-accent{background:var(--warn)}
+.kpi.danger .k-accent{background:var(--danger)}
+
+/* ---------- 横向条形 ---------- */
+.bars{display:flex;flex-direction:column;gap:11px}
+.bar-row{display:grid;grid-template-columns:96px 1fr 118px;gap:12px;align-items:center}
+.bar-row .name{font-size:12.5px;color:var(--ink2);white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
+.bar-track{position:relative;height:9px;border-radius:5px;background:#eef1f5}
+.bar-fill{position:absolute;left:0;top:0;bottom:0;border-radius:5px;
+  background:linear-gradient(90deg,#14b8a6,#0d7a6f)}
+.bar-ci{position:absolute;top:-3px;height:15px;border-radius:2px;
+  background:rgba(13,122,111,.13);border-left:1px solid rgba(13,122,111,.28);
+  border-right:1px solid rgba(13,122,111,.28)}
+.bar-row .val{font-size:12.5px;text-align:right;color:var(--ink2);
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar-row .val b{font-weight:600;color:var(--ink)}
+
+/* ---------- 图例 / 环形 ---------- */
+.donut-wrap{display:flex;gap:18px;align-items:center}
+.donut svg{display:block}
+.legend{display:flex;flex-direction:column;gap:9px;flex:1;min-width:0}
+.legend-item{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--ink2)}
+.legend-item .sw{width:9px;height:9px;border-radius:2px;flex:none}
+.legend-item .lg-val{margin-left:auto;font-variant-numeric:tabular-nums;color:var(--muted)}
+
+/* ---------- 表格 ---------- */
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-weight:600;color:var(--muted);font-size:12px;
+  letter-spacing:.03em;padding:0 12px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid var(--line2);vertical-align:top}
+tr:last-child td{border-bottom:0}
+tbody tr:hover{background:#fafbfc}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.table-wrap{overflow-x:auto;margin:0 -6px}
+
+/* ---------- 标签 ---------- */
+.tag{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;padding:2px 8px;
+  border-radius:6px;background:#f1f4f8;color:var(--ink2);white-space:nowrap;line-height:1.7}
+.tag.ok{background:var(--accent-soft);color:var(--accent2)}
+.tag.warn{background:var(--warn-soft);color:var(--warn)}
+.tag.danger{background:var(--danger-soft);color:var(--danger)}
+.tag.ghost{background:transparent;border:1px solid var(--line);color:var(--muted)}
+.tag.self{background:#eef4ff;color:#1e40af}
+
+/* ---------- 事实项 ---------- */
+.fact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(max-width:820px){.fact-grid{grid-template-columns:1fr}}
+.fact{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:#fcfdfe}
+.fact .f-head{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.fact .f-key{font-size:12px;color:var(--muted)}
+.fact .f-val{margin-top:6px;font-size:13px;color:var(--ink);word-break:break-all}
+
+/* ---------- 事件卡 ---------- */
+.inc{border:1px solid var(--line);border-left:3px solid var(--line);border-radius:10px;
+  padding:13px 15px;background:#fff;margin-bottom:10px}
+.inc.p0{border-left-color:var(--danger)}
+.inc.p1{border-left-color:var(--warn)}
+.inc .i-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:5px}
+.inc .i-title{font-weight:600;font-size:13.5px}
+.inc .i-body{font-size:12.5px;color:var(--ink2);line-height:1.6}
+.inc .i-exp{font-size:12px;color:var(--muted);margin-top:5px}
+.inc .i-foot{margin-top:9px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+
+/* ---------- 指标说明块 ---------- */
+.formula{background:#0f172a;color:#e2e8f0;border-radius:10px;padding:14px 18px;
+  font-family:"SF Mono",Consolas,monospace;font-size:13px;letter-spacing:.01em;overflow-x:auto}
+.formula em{color:#5eead4;font-style:normal}
+.kv{display:flex;justify-content:space-between;gap:12px;padding:9px 0;
+  border-bottom:1px dashed var(--line);font-size:13px}
+.kv:last-child{border-bottom:0}
+.kv .k{color:var(--muted)}
+.kv .v{font-variant-numeric:tabular-nums;font-weight:600;color:var(--ink)}
+.list{font-size:12.8px;color:var(--ink2);line-height:1.85;padding-left:18px;margin:0}
+.list li{margin:2px 0}
+
+/* ---------- 筛选器 ---------- */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.filters input[type=search],.filters select{font:inherit;font-size:13px;padding:7px 11px;
+  border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);outline:none;min-width:150px}
+.filters input[type=search]{flex:1;min-width:220px}
+.filters input:focus,.filters select:focus{border-color:#a9d6cf;box-shadow:0 0 0 3px rgba(20,184,166,.12)}
+.count{font-size:12px;color:var(--muted);margin-left:auto;align-self:center}
+
+/* ---------- 报告 ---------- */
+.report{background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:34px 40px;box-shadow:var(--shadow);max-width:880px;margin:0 auto}
+.report h1{font-size:22px;margin-bottom:6px}
+.report .r-meta{font-size:12.5px;color:var(--muted);margin-bottom:22px}
+.report h2{font-size:15px;margin:26px 0 10px;padding-bottom:8px;border-bottom:1px solid var(--line2)}
+.report p{font-size:13.5px;color:var(--ink2);line-height:1.85}
