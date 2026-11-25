@@ -114,7 +114,7 @@ function go(tab) {
   document.querySelectorAll(".tab").forEach((b) =>
     { b.classList.toggle("active", b.dataset.tab === tab); if (b.dataset.tab === tab) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current"); });
   const page = document.getElementById("page");
-  const hostedNote = window.GEO_DEPLOYMENT?.mode === "static" ? '<div class="banner" role="note">完整前端在线版 · 当前展示历史样本。每日采集与账号登录需在本机后台运行；草稿与整改记录仅保存在当前浏览器。</div>' : "";
+  const hostedNote = window.GEO_DEPLOYMENT?.mode === "static" && tab !== "overview" ? '<div class="banner" role="note">完整前端在线版 · 当前展示历史样本。每日采集与账号登录需在本机后台运行；草稿与整改记录仅保存在当前浏览器。</div>' : "";
   page.innerHTML = hostedNote + (window.VIEWS[tab] ? window.VIEWS[tab]() : "");
   if (window.VIEW_MOUNTS[tab]) window.VIEW_MOUNTS[tab]();
   document.title = `${TABS.find(([id]) => id === tab)?.[1] || "GEO"} · 门店 GEO 运营`;
